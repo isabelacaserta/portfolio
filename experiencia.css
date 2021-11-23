@@ -1,0 +1,129 @@
+.experiencia {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+  justify-content: center;
+}
+
+.experiencia-conteudo {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+}
+
+.experiencia-resumo {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+.experiencia-resumo strong {
+  color: #141414;
+}
+
+.empresa {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 2rem;
+  position: relative;
+}
+
+.empresa-ano {
+  /* position: absolute;
+  left: -5.5rem;
+  top: 2rem; */
+  color: #525252;
+  justify-items: end;
+  /* background: red; */
+}
+
+.empresa-titulo,
+.empresa-funcao {
+  display: grid;
+  grid-template-rows: auto;
+  gap: .6rem;
+  align-content: start;
+}
+
+.empresa-itens {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: #f5f5f5;
+  border-radius: .5rem;
+  position: relative;
+}
+
+.empresa-itens::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  border-radius: 1px;
+  position: absolute;
+  left: -4px;
+  top: 2rem;
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.experiencia-descricao {
+  color: #525252;
+  font-size: .875rem;
+  line-height: 1.4;
+}
+
+.experiencia-funcoes {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.experiencia-funcoes li {
+  background: white;
+  padding: .5rem 1rem;
+  border-radius: .5px;
+  font-size: .875rem;
+}
+
+.experiencia .subtitulo {
+  color: rgba(0, 0, 0, .1);
+}
+
+@media (max-width:800px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+  .experiencia .subtitulo {
+    color: #141414;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 0;
+  }
+  .experiencia-resumo {
+    font-size: 1.25rem;
+  }
+  .empresa-ano {
+    position: initial;
+  }
+}
+
+@media (max-width:500px) {
+  .empresa-itens {
+    grid-template-columns:1fr;
+  }
+  .experiencia {
+    grid-template-columns: 1fr;
+  }
+  .experiencia-resumo {
+    text-align: left;
+  }
+  .experiencia-descricao {
+    text-align: left;
+  }
+}
